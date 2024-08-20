@@ -1,40 +1,20 @@
-# NativeScript Angular Template
+# Integrate CESDK to Nativescript (POC)
 
-This template creates a "Hello, world" NativeScript app using TypeScript and Angular.
+## 1. run command 'ns build android'
 
-You can create a new app that uses this template with either the `--template` option.
+   img.ly dependencies were not available in exploded-dependencies folder, but they had been listed to text file.
+   ./platforms/android/app/build/outputs/logs/manifest-merger-debug-report.txt
+    So, I created script 'gen-imgly.sh' to read path from text file and generate d.ts script
 
-```
-ns create my-hello-world-ng --template @nativescript/template-hello-world-ng
-```
+## 2. run script gen-imgly.sh
+   After script running, there are some files that error.
 
-Or the `--ng` shorthand.
+    Android d.ts Generator Version : 3.0.0
+      Error executing Typescript Definitions Generator: null
+      java.lang.NullPointerException
+      at com.telerik.dts.DtsApi.generateDtsContent(DtsApi.java:218)
+      at com.telerik.dts.Generator.generateDts(Generator.java:69)
+      at com.telerik.dts.Generator.start(Generator.java:51)
+      at com.telerik.Main.main(Main.java:42)
+      Command java failed with exit code 1
 
-```
-ns create my-hello-world-ng --ng
-```
-
-> Note: Both commands will create a new NativeScript app that uses the latest version of this template published to [npm](https://www.npmjs.com/package/@nativescript/template-hello-world-ng).
-
-If you want to create a new app that uses the source of the template from the `main` branch, you can execute the following:
-
-```
-# clone nativescript-app-templates monorepo locally
-git clone git@github.com:NativeScript/nativescript-app-templates.git
-
-# create app template from local source (all templates are in the 'packages' subfolder of the monorepo)
-ns create my-hello-world-ng --template nativescript-app-templates/packages/template-hello-world-ng
-```
-
-**NB:** Please, have in mind that the main branch may refer to dependencies that are not on NPM yet!
-
-## Get Help
-The NativeScript framework has a vibrant community that can help when you run into problems.
-
-Try [joining the NativeScript community Discord](https://nativescript.org/discord). The Discord channel is a great place to get help troubleshooting problems, as well as connect with other NativeScript developers.
-
-If you have found an issue with this template, please report the problem in the [NativeScript repository](https://github.com/NativeScript/NativeScript/issues).
-
-## Contributing
-
-We love PRs, and accept them gladly. Feel free to propose changes and new ideas. We will review and discuss, so that they can be accepted and better integrated.
