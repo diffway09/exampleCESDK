@@ -19,8 +19,8 @@ cd typings/android
 for path in "${uniquePath[@]}"
 do
     printf '%s\n' "$path"
-#    ns typings android --jar "${path}"
-#    (( count++ ))
-#    mv android.d.ts android${count}.d.ts
+    ns typings android --jar "${path}"
+    (( count++ ))
+    mv android.d.ts android${count}.d.ts
 done
 
