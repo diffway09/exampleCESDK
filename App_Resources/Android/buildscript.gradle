@@ -2,7 +2,6 @@ repositories {
     gradlePluginPortal()
     google()
     mavenCentral()
-    maven { url "https://artifactory.img.ly/artifactory/maven" }
 }
 
 dependencies {
