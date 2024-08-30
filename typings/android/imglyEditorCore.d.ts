@@ -1,4 +1,4 @@
-/// <reference path="android-declarations.d.ts"/>
+/// <reference path="android_declarations.d.ts"/>
 
 declare module ly {
 	export module img {
@@ -87,27 +87,27 @@ declare module ly {
 					export class AssetLibrary {
 						public static class: java.lang.Class<ly.img.editor.core.library.AssetLibrary>;
 						public static $stable: number;
-						public constructor(tabs: any<any,any>, elements: any<any,ly.img.editor.core.library.LibraryCategory>, images: any<any,ly.img.editor.core.library.LibraryCategory>, videos: any<any,ly.img.editor.core.library.LibraryCategory>, audios: any<any,ly.img.editor.core.library.LibraryCategory>, text: any<any,ly.img.editor.core.library.LibraryCategory>, shapes: any<any,ly.img.editor.core.library.LibraryCategory>, stickers: any<any,ly.img.editor.core.library.LibraryCategory>);
-						public getImages(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
+						public constructor(tabs: any, elements: any, images: any, videos: any, audios: any, text: any, shapes: any, stickers: any);
+						public getImages(): any;
 						public equals(other: any): boolean;
-						public component2(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
+						public component2(): any;
 						public hashCode(): number;
-						public component8(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
-						public getTabs(): any<ly.img.engine.SceneMode,java.util.List<ly.img.editor.core.library.LibraryCategory>>;
-						public component3(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
+						public component8(): any;
+						public getTabs(): any;
+						public component3(): any;
 						public toString(): string;
-						public component7(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
-						public getShapes(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
-						public component1(): any<ly.img.engine.SceneMode,java.util.List<ly.img.editor.core.library.LibraryCategory>>;
-						public component4(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
-						public getText(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
-						public component6(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
-						public copy(tabs: any<any,any>, elements: any<any,ly.img.editor.core.library.LibraryCategory>, images: any<any,ly.img.editor.core.library.LibraryCategory>, videos: any<any,ly.img.editor.core.library.LibraryCategory>, audios: any<any,ly.img.editor.core.library.LibraryCategory>, text: any<any,ly.img.editor.core.library.LibraryCategory>, shapes: any<any,ly.img.editor.core.library.LibraryCategory>, stickers: any<any,ly.img.editor.core.library.LibraryCategory>): ly.img.editor.core.library.AssetLibrary;
-						public getElements(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
-						public getVideos(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
-						public getAudios(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
-						public component5(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
-						public getStickers(): any<ly.img.engine.SceneMode,ly.img.editor.core.library.LibraryCategory>;
+						public component7(): any;
+						public getShapes(): any;
+						public component1(): any;
+						public component4(): any;
+						public getText(): any;
+						public component6(): any;
+						public copy(tabs: any, elements: any, images: any, videos: any, audios: any, text: any, shapes: any, stickers: any): ly.img.editor.core.library.AssetLibrary;
+						public getElements(): any;
+						public getVideos(): any;
+						public getAudios(): any;
+						public component5(): any;
+						public getStickers(): any;
 					}
 					export module AssetLibrary {
 						export class Companion {
@@ -193,7 +193,7 @@ declare module ly {
 							public getVideo(): ly.img.editor.core.library.LibraryCategory;
 							public getShapes(): ly.img.editor.core.library.LibraryCategory;
 							public getStickers(): ly.img.editor.core.library.LibraryCategory;
-							public getElements($this$getElements_u24lambda_u2416_u24lambda_u240: ly.img.engine.SceneMode, $i$a$-let-LibraryCategory$Companion$getElements$1$2$1: ly.img.editor.core.library.LibraryCategory, p0: ly.img.editor.core.library.LibraryCategory, $i$a$-let-LibraryCategory$Companion$getElements$1$2$2: ly.img.editor.core.library.LibraryCategory, p0: ly.img.editor.core.library.LibraryCategory, $i$a$-buildList-LibraryCategory$Companion$getElements$1$2: ly.img.editor.core.library.LibraryCategory, $this$getElements_u24lambda_u2416_u24lambda_u242: ly.img.editor.core.library.LibraryCategory): ly.img.editor.core.library.LibraryCategory;
+							public getElements($this$getElements_u24lambda_u2416_u24lambda_u240: ly.img.engine.SceneMode, $i$a$_let_LibraryCategory$Companion$getElements$1$2$1: ly.img.editor.core.library.LibraryCategory, p0: ly.img.editor.core.library.LibraryCategory, $i$a$_let_LibraryCategory$Companion$getElements$1$2$2: ly.img.editor.core.library.LibraryCategory, p0: ly.img.editor.core.library.LibraryCategory, $i$a$_buildList_LibraryCategory$Companion$getElements$1$2: ly.img.editor.core.library.LibraryCategory, $this$getElements_u24lambda_u2416_u24lambda_u242: ly.img.editor.core.library.LibraryCategory): ly.img.editor.core.library.LibraryCategory;
 							public getImages(): ly.img.editor.core.library.LibraryCategory;
 							public getAudio(): ly.img.editor.core.library.LibraryCategory;
 							public getText(): ly.img.editor.core.library.LibraryCategory;
@@ -264,7 +264,7 @@ declare module ly {
 							public getCount(): number;
 							public getAddGroupedSubSections(): boolean;
 							public component8(): ly.img.editor.core.library.LibraryContent;
-							public constructor($i$a$-require-LibraryContent$Section$2: java.lang.Integer, $i$a$-require-LibraryContent$Section$3: java.util.List<any>, $i$a$-require-LibraryContent$Section$4: java.util.List<string>, this_: boolean, titleRes: boolean, sourceTypes: number, groups: ly.img.editor.core.library.AssetType, addGroupedSubSections: ly.img.editor.core.library.LibraryContent);
+							public constructor($i$a$_require_LibraryContent$Section$2: java.lang.Integer, $i$a$_require_LibraryContent$Section$3: java.util.List<any>, $i$a$_require_LibraryContent$Section$4: java.util.List<string>, this_: boolean, titleRes: boolean, sourceTypes: number, groups: ly.img.editor.core.library.AssetType, addGroupedSubSections: ly.img.editor.core.library.LibraryContent);
 							public component7(): ly.img.editor.core.library.AssetType;
 							public getAssetType(): ly.img.editor.core.library.AssetType;
 							public component3(): java.util.List<string>;

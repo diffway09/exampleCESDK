@@ -30,14 +30,14 @@ declare module ly {
 			export class EditorConfiguration<STATE>  extends java.lang.Object {
 				public static class: java.lang.Class<ly.img.editor.EditorConfiguration<any>>;
 				public static $stable: number;
-				public constructor(initialState: STATE, uiMode: ly.img.editor.EditorUiMode, navigationIcon: androidx.compose.ui.graphics.vector.ImageVector, assetLibrary: ly.img.editor.core.library.AssetLibrary, colorPalette: java.util.List<androidx.compose.ui.graphics.Color>, onEvent: any<any,any,any,any>, overlay: any<any,any,any,any,any>);
-				public getOnEvent(): any<globalAndroid.app.Activity,STATE,ly.img.editor.core.event.EditorEvent,STATE>;
+				public constructor(initialState: STATE, uiMode: ly.img.editor.EditorUiMode, navigationIcon: androidx.compose.ui.graphics.vector.ImageVector, assetLibrary: ly.img.editor.core.library.AssetLibrary, colorPalette: java.util.List<androidx.compose.ui.graphics.Color>, onEvent: any, overlay: any);
+				public getOnEvent(): any;
 				public getInitialState(): STATE;
 				public getNavigationIcon(): androidx.compose.ui.graphics.vector.ImageVector;
 				public getAssetLibrary(): ly.img.editor.core.library.AssetLibrary;
 				public getUiMode(): ly.img.editor.EditorUiMode;
 				public getColorPalette(): java.util.List<androidx.compose.ui.graphics.Color>;
-				public getOverlay(): any<STATE,ly.img.editor.core.event.EditorEventHandler,androidx.compose.runtime.Composer,java.lang.Integer,any>;
+				public getOverlay(): any;
 			}
 			export module EditorConfiguration {
 				export class Companion {
@@ -127,13 +127,13 @@ declare module ly {
 			export class EngineConfiguration {
 				public static class: java.lang.Class<ly.img.editor.EngineConfiguration>;
 				public static $stable: number;
-				public getOnClose(): any<ly.img.engine.Engine,java.lang.Boolean,ly.img.editor.core.event.EditorEventHandler,any,any>;
-				public getOnExport(): any<ly.img.engine.Engine,ly.img.editor.core.event.EditorEventHandler,any,any>;
-				public getOnUpload(): any<ly.img.engine.AssetDefinition,ly.img.engine.Engine,ly.img.editor.core.event.EditorEventHandler,ly.img.editor.core.library.data.UploadAssetSourceType,any,any>;
-				public constructor(license: string, userId: string, baseUri: globalAndroid.net.Uri, renderTarget: ly.img.editor.core.engine.EngineRenderTarget, onCreate: any<any,any,any,any>, onExport: any<any,any,any,any>, onUpload: any<any,any,any,any,any,any>, onClose: any<any,any,any,any,any>, onError: any<any,any,any,any,any>);
-				public getOnError(): any<java.lang.Throwable,ly.img.engine.Engine,ly.img.editor.core.event.EditorEventHandler,any,any>;
+				public getOnClose(): any;
+				public getOnExport(): any;
+				public getOnUpload(): any;
+				public constructor(license: string, userId: string, baseUri: globalAndroid.net.Uri, renderTarget: ly.img.editor.core.engine.EngineRenderTarget, onCreate: any, onExport: any, onUpload: any, onClose: any, onError: any);
+				public getOnError(): any;
 				public getLicense(): string;
-				public getOnCreate(): any<ly.img.engine.Engine,ly.img.editor.core.event.EditorEventHandler,any,any>;
+				public getOnCreate(): any;
 				public getRenderTarget(): ly.img.editor.core.engine.EngineRenderTarget;
 				public getUserId(): string;
 				public getBaseUri(): globalAndroid.net.Uri;

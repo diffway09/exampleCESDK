@@ -1,4 +1,4 @@
-/// <reference path="android-declarations.d.ts"/>
+/// <reference path="android_declarations.d.ts"/>
 
 declare module ly {
 	export module img {
@@ -175,7 +175,7 @@ declare module ly {
 				 */
 				public constructor(implementation: {
 					addSource(param0: ly.img.engine.AssetSource): void;
-					addLocalSource(param0: string, param1: java.util.List<string>, param2: any<any,any,any>, param3: any<any,any,any,any>): void;
+					addLocalSource(param0: string, param1: java.util.List<string>, param2: any, param3: any): void;
 					removeSource(param0: string): void;
 					findAllSources(): java.util.List<string>;
 					addAsset(param0: string, param1: ly.img.engine.AssetDefinition): void;
@@ -194,7 +194,7 @@ declare module ly {
 				});
 				public constructor();
 				public getGroups(param0: string, param1: any): any;
-				public addLocalSource(param0: string, param1: java.util.List<string>, param2: any<any,any,any>, param3: any<any,any,any,any>): void;
+				public addLocalSource(param0: string, param1: java.util.List<string>, param2: any, param3: any): void;
 				public findAssets(param0: string, param1: ly.img.engine.FindAssetsQuery, param2: any): any;
 				public getCredits(param0: string): ly.img.engine.AssetCredits;
 				public onAssetSourceAdded(): kotlinx.coroutines.flow.Flow<string>;
@@ -508,9 +508,9 @@ declare module ly {
 				 * Constructs a new instance of the ly.img.engine.BlockApi interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
 				public constructor(implementation: {
-					export(param0: number, param1: ly.img.engine.MimeType, param2: ly.img.engine.ExportOptions, param3: any<any,any,any>, param4: any): any;
-					exportWithColorMask(param0: number, param1: ly.img.engine.MimeType, param2: ly.img.engine.RGBAColor, param3: ly.img.engine.ExportOptions, param4: any<any,any,any>, param5: any): any;
-					exportVideo(param0: number, param1: number, param2: number, param3: ly.img.engine.MimeType, param4: any<any,any>, param5: ly.img.engine.ExportVideoOptions, param6: any<any,any,any>, param7: any): any;
+					export(param0: number, param1: ly.img.engine.MimeType, param2: ly.img.engine.ExportOptions, param3: any, param4: any): any;
+					exportWithColorMask(param0: number, param1: ly.img.engine.MimeType, param2: ly.img.engine.RGBAColor, param3: ly.img.engine.ExportOptions, param4: any, param5: any): any;
+					exportVideo(param0: number, param1: number, param2: number, param3: ly.img.engine.MimeType, param4: any, param5: ly.img.engine.ExportVideoOptions, param6: any, param7: any): any;
 					loadFromString(param0: string, param1: any): any;
 					loadFromArchive(param0: globalAndroid.net.Uri, param1: any): any;
 					saveToString(param0: java.util.List<java.lang.Integer>, param1: java.util.List<string>, param2: any): any;
@@ -843,7 +843,7 @@ declare module ly {
 				public isValid(param0: number): boolean;
 				public supportsShape(param0: number): boolean;
 				public getVolume(param0: number): number;
-				public export(param0: number, param1: ly.img.engine.MimeType, param2: ly.img.engine.ExportOptions, param3: any<any,any,any>, param4: any): any;
+				public export(param0: number, param1: ly.img.engine.MimeType, param2: ly.img.engine.ExportOptions, param3: any, param4: any): any;
 				public isPlaceholderControlsButtonEnabled(param0: number): boolean;
 				public alignHorizontally(param0: java.util.List<java.lang.Integer>, param1: ly.img.engine.HorizontalBlockAlignment): void;
 				public isDropShadowEnabled(param0: number): boolean;
@@ -1094,7 +1094,7 @@ declare module ly {
 				public removeMetadata(param0: number, param1: string): void;
 				public setFill(param0: number, param1: number): void;
 				public supportsFill(param0: number): boolean;
-				public exportWithColorMask(param0: number, param1: ly.img.engine.MimeType, param2: ly.img.engine.RGBAColor, param3: ly.img.engine.ExportOptions, param4: any<any,any,any>, param5: any): any;
+				public exportWithColorMask(param0: number, param1: ly.img.engine.MimeType, param2: ly.img.engine.RGBAColor, param3: ly.img.engine.ExportOptions, param4: any, param5: any): any;
 				public distributeVertically(param0: java.util.List<java.lang.Integer>): void;
 				public setInAnimation(param0: number, param1: number): void;
 				public setDuration(param0: number, param1: number): void;
@@ -1135,7 +1135,7 @@ declare module ly {
 				/** @deprecated */
 				public hasBlendMode(param0: number): boolean;
 				public setPlaybackTime(param0: number, param1: number): void;
-				public exportVideo(param0: number, param1: number, param2: number, param3: ly.img.engine.MimeType, param4: any<any,any>, param5: ly.img.engine.ExportVideoOptions, param6: any<any,any,any>, param7: any): any;
+				public exportVideo(param0: number, param1: number, param2: number, param3: ly.img.engine.MimeType, param4: any, param5: ly.img.engine.ExportVideoOptions, param6: any, param7: any): any;
 				public sendToBack(param0: number): void;
 				public getFrameHeight(param0: number): number;
 				public setDropShadowOffsetX(param0: number, param1: number): void;
@@ -1550,7 +1550,7 @@ declare module ly {
 					setRole(param0: string): void;
 					findAllSettings(): java.util.List<string>;
 					getSettingType(param0: string): ly.img.engine.PropertyType;
-					setUriResolver(param0: any<any,any>): void;
+					setUriResolver(param0: any): void;
 					defaultUriResolver(param0: globalAndroid.net.Uri): globalAndroid.net.Uri;
 					getAbsoluteUri(param0: globalAndroid.net.Uri): globalAndroid.net.Uri;
 					findAllScopes(): java.util.List<string>;
@@ -1631,7 +1631,7 @@ declare module ly {
 				public getRole(): string;
 				public getActiveHistory(): number;
 				public canRedo(): boolean;
-				public setUriResolver(param0: any<any,any>): void;
+				public setUriResolver(param0: any): void;
 				public getSettingFloat(param0: string): number;
 			}
 		}
@@ -1759,7 +1759,7 @@ declare module ly {
 				public getBlock(): ly.img.engine.BlockApi;
 				public getEditor(): ly.img.engine.EditorApi;
 				public isEngineRunning$ubq_android_engine_release(): boolean;
-				public run$ubq_android_engine_release(block: any<any,any>): void;
+				public run$ubq_android_engine_release(block: any): void;
 				public getLooper(): globalAndroid.os.Looper;
 				public stop(): boolean;
 				public getIdlingEnabled(): boolean;
@@ -1767,7 +1767,7 @@ declare module ly {
 				public surfaceCreated$ubq_android_engine_release(bindIsSuccessful: number, this_: number): void;
 				public surfaceCreated$ubq_android_engine_release(bindIsSuccessful: globalAndroid.view.Surface, iterator: number, this_: number): void;
 				public getEvent(): ly.img.engine.EventApi;
-				public getSurfaceCreatedListeners$ubq_android_engine_release(): java.util.List<any;
+				public getSurfaceCreatedListeners$ubq_android_engine_release(): java.util.List<any>;
 				public bindSurfaceView(surfaceView: globalAndroid.view.SurfaceView): void;
 				public getBoundContext$ubq_android_engine_release(): ly.img.engine.internal.context.Context;
 				public surfaceChanged$ubq_android_engine_release(width: number, height: number): void;
@@ -1776,11 +1776,11 @@ declare module ly {
 				public getDispatcher(): kotlinx.coroutines.MainCoroutineDispatcher;
 				public getAsset(): ly.img.engine.AssetApi;
 				public start(this_: string, license: string, userId: androidx.savedstate.SavedStateRegistryOwner, savedStateRegistryOwner: any): any;
-				public setBoundContext$ubq_android_engine_release(<set-?>: ly.img.engine.internal.context.Context): void;
+				public setBoundContext$ubq_android_engine_release(set: ly.img.engine.internal.context.Context): void;
 				public saveState(): globalAndroid.os.Bundle;
 				public markIdleNot$ubq_android_engine_release(): void;
-				public setSurfaceCreatedListeners$ubq_android_engine_release(<set-?>: java.util.List<any): void;
-				public bindOffscreen($i$a$-require-Engine$bindOffscreen$2: number, this_: number): void;
+				public setSurfaceCreatedListeners$ubq_android_engine_release(set: java.util.List<any>): void;
+				public bindOffscreen($i$a$_require_Engine$bindOffscreen$2: number, this_: number): void;
 				public getCoreNativeApi$ubq_android_engine_release(): ly.img.engine.internal.api.core.CoreNativeApi;
 				public bindTextureView(textureView: globalAndroid.view.TextureView): void;
 				public removeSurfaceCreatedListener(listener: any): void;
@@ -1788,7 +1788,7 @@ declare module ly {
 				public isEngineRunning(): boolean;
 				public unbind(): void;
 				public surfaceDestroyed$ubq_android_engine_release(): void;
-				public setEngineRunning$ubq_android_engine_release(<set-?>: boolean): void;
+				public setEngineRunning$ubq_android_engine_release(set: boolean): void;
 				public bind$ubq_android_engine_release(): void;
 				public addSurfaceCreatedListener(listener: any): void;
 			}
@@ -1798,7 +1798,7 @@ declare module ly {
 					public init(application: globalAndroid.app.Application): void;
 					public requireMainThread$ubq_android_engine_release(): void;
 					public getExportEngine$ubq_android_engine_release(): ly.img.engine.Engine;
-					public getInstance(default$iv: string, $i$a$-let-MapsKt__MapsJVMKt$getOrPut$1$iv: ly.img.engine.AudioContext): ly.img.engine.Engine;
+					public getInstance(default$iv: string, $i$a$_let_MapsKt__MapsJVMKt$getOrPut$1$iv: ly.img.engine.AudioContext): ly.img.engine.Engine;
 				}
 			}
 		}
@@ -1836,7 +1836,6 @@ declare module ly {
 	export module img {
 		export module engine {
 			export module EngineExtensionsKt {
-export module  {
 				export class WhenMappings {
 					public static class: java.lang.Class<ly.img.engine.EngineExtensionsKt.WhenMappings>;
 				}
@@ -2223,7 +2222,7 @@ declare module ly {
 					export class DefaultImpls {
 						public static class: java.lang.Class<ly.img.engine.ObjectType.GenericBlockType.DefaultImpls>;
 						public static get(this_: ly.img.engine.ObjectType.GenericBlockType<any>, key: string): ly.img.engine.ObjectType;
-						public static getOrNull($i$a$-find-ObjectType$GenericBlockType$getOrNull$1: ly.img.engine.ObjectType.GenericBlockType<any>, it: string): ly.img.engine.ObjectType;
+						public static getOrNull($i$a$_find_ObjectType$GenericBlockType$getOrNull$1: ly.img.engine.ObjectType.GenericBlockType<any>, it: string): ly.img.engine.ObjectType;
 					}
 				}
 			}
@@ -2818,14 +2817,14 @@ declare module ly {
 						public getFetchProgress(fetchHandle: number): number;
 						public static removeInstance(ubqId: number): void;
 						public release(): void;
-						public fetchAsync($this$fetchAsync_u24lambda_u2d4: number, $i$a$-run-FetchAsyncService$fetchAsync$6: string, exception: androidNative.Array<string>, $this$fetchAsync_u24lambda_u2d5: androidNative.Array<string>, requestBody: string, multipartBody: string, requestBuilder: string, this_: androidNative.Array<number>): void;
+						public fetchAsync($this$fetchAsync_u24lambda_u2d4: number, $i$a$_run_FetchAsyncService$fetchAsync$6: string, exception: androidNative.Array<string>, $this$fetchAsync_u24lambda_u2d5: androidNative.Array<string>, requestBody: string, multipartBody: string, requestBuilder: string, this_: androidNative.Array<number>): void;
 						public getEngineLooper(): globalAndroid.os.Looper;
 						public freeFetchResult(it: number): void;
 						public getFetchFullState(fetchHandle: number): ly.img.engine.internal.model.FetchResult;
 						public getFetchState(fetchHandle: number): number;
-						public setEngineLooper(<set-?>: globalAndroid.os.Looper): void;
-						public fetchAsync($this$fetchAsync_u24lambda_u2d0: number, $i$a$-run-FetchAsyncService$fetchAsync$2: string, exception: androidNative.Array<string>, $this$fetchAsync_u24lambda_u2d1: androidNative.Array<string>): void;
-						public fetchAsync($this$fetchAsync_u24lambda_u2d2: number, $i$a$-run-FetchAsyncService$fetchAsync$4: string, exception: androidNative.Array<string>, $this$fetchAsync_u24lambda_u2d3: androidNative.Array<string>, requestBuilder: string): void;
+						public setEngineLooper(set: globalAndroid.os.Looper): void;
+						public fetchAsync($this$fetchAsync_u24lambda_u2d0: number, $i$a$_run_FetchAsyncService$fetchAsync$2: string, exception: androidNative.Array<string>, $this$fetchAsync_u24lambda_u2d1: androidNative.Array<string>): void;
+						public fetchAsync($this$fetchAsync_u24lambda_u2d2: number, $i$a$_run_FetchAsyncService$fetchAsync$4: string, exception: androidNative.Array<string>, $this$fetchAsync_u24lambda_u2d3: androidNative.Array<string>, requestBuilder: string): void;
 						public static getInstance(ubqId: number): ly.img.engine.internal.android.FetchAsyncService;
 						public getFetchResult(fetchHandle: number): string;
 					}
@@ -2851,7 +2850,7 @@ declare module ly {
 					export class LicenseService {
 						public static class: java.lang.Class<ly.img.engine.internal.android.LicenseService>;
 						public static INSTANCE: ly.img.engine.internal.android.LicenseService;
-						public unlock(okHttpClient: okhttp3.OkHttpClient, license: string, license: string, license: any<any,any>, userId: any): any;
+						public unlock(okHttpClient: okhttp3.OkHttpClient, license: string, license: string, license: any, userId: any): any;
 					}
 				}
 			}
@@ -2908,7 +2907,7 @@ declare module ly {
 						public static class: java.lang.Class<ly.img.engine.internal.android.ResourceLoaderService>;
 						public engineDispatcher: kotlinx.coroutines.MainCoroutineDispatcher;
 						public loadResource(this_: number, handle: string, path: boolean): void;
-						public setEngineDispatcher(<set-?>: kotlinx.coroutines.MainCoroutineDispatcher): void;
+						public setEngineDispatcher(set: kotlinx.coroutines.MainCoroutineDispatcher): void;
 						public getLoadFullState(handle: number): ly.img.engine.internal.model.FetchResult;
 						public getLoadResult(handle: number): string;
 						public static getInstance(ubqId: number): ly.img.engine.internal.android.ResourceLoaderService;
@@ -2993,7 +2992,7 @@ declare module ly {
 						public release(): void;
 						public sync(result: any): any;
 						public stream(this_: any): kotlinx.coroutines.flow.Flow;
-						public callback(it: ly.img.engine.internal.api.CallbackCategory, $i$a$-let-BaseApi$callback$nativeCallback$1: any, it: any): void;
+						public callback(it: ly.img.engine.internal.api.CallbackCategory, $i$a$_let_BaseApi$callback$nativeCallback$1: any, it: any): void;
 					}
 					export module BaseApi {
 						export class Companion {
@@ -3002,13 +3001,13 @@ declare module ly {
 						}
 						export class NativeCallbackImpl<T, R>  extends ly.img.engine.internal.api.NativeCallback<any,any> {
 							public static class: java.lang.Class<ly.img.engine.internal.api.BaseApi.NativeCallbackImpl<any,any>>;
-							public constructor(continuation: any, producerScope: kotlinx.coroutines.channels.ProducerScope<any>, callback: any<any,any>);
+							public constructor(continuation: any, producerScope: kotlinx.coroutines.channels.ProducerScope<any>, callback: any);
 							public getHandle(): number;
 							public onSuccess(param0: any): any;
 							public onError(param0: string): void;
 							public onError(this_: string): void;
 							public onSuccess(result: any): any;
-							public setHandle(<set-?>: number): void;
+							public setHandle(set: number): void;
 						}
 					}
 				}
@@ -3070,7 +3069,7 @@ declare module ly {
 							public removeSource(result$iv: string): void;
 							public addAsset(param0: string, param1: ly.img.engine.AssetDefinition): void;
 							public getCredits(param0: string): ly.img.engine.AssetCredits;
-							public applyAssetSourceAsset($this$applyAssetSourceAsset_u24lambda_u2d14: string, it: ly.img.engine.Asset, $i$a$-suspendCancellableCoroutine-BaseApi$async$2$iv: any): any;
+							public applyAssetSourceAsset($this$applyAssetSourceAsset_u24lambda_u2d14: string, it: ly.img.engine.Asset, $i$a$_suspendCancellableCoroutine_BaseApi$async$2$iv: any): any;
 							public defaultApplyAsset(param0: ly.img.engine.Asset, param1: any): any;
 							public addAsset(result$iv: string, this_$iv: ly.img.engine.AssetDefinition): void;
 							public getSourceSupportedMimeTypes(result$iv: string): java.util.List<string>;
@@ -3080,18 +3079,18 @@ declare module ly {
 							public findAllSources(): java.util.List<string>;
 							public getGroups(param0: string, param1: any): any;
 							public removeAsset(result$iv: string, this_$iv: string): void;
-							public applyAssetSourceAsset($this$applyAssetSourceAsset_u24lambda_u2d15: string, it: ly.img.engine.Asset, $i$a$-suspendCancellableCoroutine-BaseApi$async$2$iv: number, callback$iv: any): any;
+							public applyAssetSourceAsset($this$applyAssetSourceAsset_u24lambda_u2d15: string, it: ly.img.engine.Asset, $i$a$_suspendCancellableCoroutine_BaseApi$async$2$iv: number, callback$iv: any): any;
 							public applyAssetSourceAsset(param0: string, param1: ly.img.engine.Asset, param2: number, param3: any): any;
 							public constructor(engine: ly.img.engine.Engine);
 							public getLicense(result$iv: string): ly.img.engine.AssetLicense;
 							public getCredits(result$iv: string): ly.img.engine.AssetCredits;
-							public addLocalSource(result$iv: string, this_$iv: java.util.List<string>, this_: any<any,any,any>, sourceId: any<any,any,any,any>): void;
-							public defaultApplyAsset($this$defaultApplyAsset_u24lambda_u2d17: ly.img.engine.Asset, it: number, $i$a$-suspendCancellableCoroutine-BaseApi$async$2$iv: any): any;
+							public addLocalSource(result$iv: string, this_$iv: java.util.List<string>, this_: any, sourceId: any): void;
+							public defaultApplyAsset($this$defaultApplyAsset_u24lambda_u2d17: ly.img.engine.Asset, it: number, $i$a$_suspendCancellableCoroutine_BaseApi$async$2$iv: any): any;
 							public release(): void;
 							public applyAssetSourceAsset(param0: string, param1: ly.img.engine.Asset, param2: any): any;
-							public findAssets($this$findAssets_u24lambda_u2d10: string, it: ly.img.engine.FindAssetsQuery, $i$a$-suspendCancellableCoroutine-BaseApi$async$2$iv: any): any;
+							public findAssets($this$findAssets_u24lambda_u2d10: string, it: ly.img.engine.FindAssetsQuery, $i$a$_suspendCancellableCoroutine_BaseApi$async$2$iv: any): any;
 							public removeAsset(param0: string, param1: string): void;
-							public addLocalSource(param0: string, param1: java.util.List<string>, param2: any<any,any,any>, param3: any<any,any,any,any>): void;
+							public addLocalSource(param0: string, param1: java.util.List<string>, param2: any, param3: any): void;
 							public constructor(engine: ly.img.engine.Engine, nativeAPI: any);
 							public getSourceSupportedMimeTypes(param0: string): java.util.List<string>;
 							public getLicense(param0: string): ly.img.engine.AssetLicense;
@@ -3260,7 +3259,7 @@ declare module ly {
 							public createShape(result$iv: string): number;
 							public setVolume(param0: number, param1: number): void;
 							public setPlaybackTime(result$iv: number, this_$iv: number): void;
-							public getTextCases(result$iv: number, this_$iv: number, $i$a$-map-BlockApiImpl$getTextCases$2: number): java.util.List<ly.img.engine.TextCase>;
+							public getTextCases(result$iv: number, this_$iv: number, $i$a$_map_BlockApiImpl$getTextCases$2: number): java.util.List<ly.img.engine.TextCase>;
 							public supportsDuration(param0: number): boolean;
 							public getBlendMode(param0: number): ly.img.engine.BlendMode;
 							public setDropShadowEnabled(param0: number, param1: boolean): void;
@@ -3334,7 +3333,7 @@ declare module ly {
 							public getInt(param0: number, param1: string): number;
 							public setCropScaleRatio(result$iv: number, this_$iv: number): void;
 							public getWidthMode(param0: number): ly.img.engine.SizeMode;
-							public exportVideo(this_: number, block: number, timeOffset: number, duration: ly.img.engine.MimeType, mimeType: any<any,any>, progressCallback: ly.img.engine.ExportVideoOptions, options: any<any,any,any>, onPreExport: any): any;
+							public exportVideo(this_: number, block: number, timeOffset: number, duration: ly.img.engine.MimeType, mimeType: any, progressCallback: ly.img.engine.ExportVideoOptions, options: any, onPreExport: any): any;
 							public supportsShape(result$iv: number): boolean;
 							public createBlur(result$iv: ly.img.engine.BlurType): number;
 							public supportsStroke(param0: number): boolean;
@@ -3451,8 +3450,8 @@ declare module ly {
 							public setLoopAnimation(param0: number, param1: number): void;
 							public getPositionXMode(result$iv: number): ly.img.engine.PositionMode;
 							public isPlaceholderEnabled(param0: number): boolean;
-							public addImageFileURIToSourceSet($this$addImageFileURIToSourceSet_u24lambda_u2d144: number, it: string, $i$a$-suspendCancellableCoroutine-BaseApi$async$2$iv: string, callback$iv: any): any;
-							public getTextFontStyles(result$iv: number, this_$iv: number, $i$a$-map-BlockApiImpl$getTextFontStyles$2: number): java.util.List<ly.img.engine.FontStyle>;
+							public addImageFileURIToSourceSet($this$addImageFileURIToSourceSet_u24lambda_u2d144: number, it: string, $i$a$_suspendCancellableCoroutine_BaseApi$async$2$iv: string, callback$iv: any): any;
+							public getTextFontStyles(result$iv: number, this_$iv: number, $i$a$_map_BlockApiImpl$getTextFontStyles$2: number): java.util.List<ly.img.engine.FontStyle>;
 							public getGradientColorStops(param0: number, param1: string): java.util.List<ly.img.engine.GradientColorStop>;
 							public setRotation(param0: number, param1: number): void;
 							public sendBackward(param0: number): void;
@@ -3529,7 +3528,7 @@ declare module ly {
 							public setKind(result$iv: number, this_$iv: string): void;
 							public getTimeOffset(param0: number): number;
 							public bringForward(result$iv: number): void;
-							public export(block: number, mimeType: ly.img.engine.MimeType, options: ly.img.engine.ExportOptions, onPreExport: any<any,any,any>, $completion: any): any;
+							public export(block: number, mimeType: ly.img.engine.MimeType, options: ly.img.engine.ExportOptions, onPreExport: any, $completion: any): any;
 							public loadFromArchive($this$loadFromArchive_u24lambda_u2d5: globalAndroid.net.Uri, it: any): any;
 							public setRotation(result$iv: number, this_$iv: number): void;
 							public getEnum(result$iv: number, this_$iv: string): string;
@@ -3614,7 +3613,7 @@ declare module ly {
 							public fillParent(result$iv: number): void;
 							public setNativePixelBuffer(result$iv: number, this_$iv: number, this_: number): number;
 							public bringForward(param0: number): void;
-							public export(param0: number, param1: ly.img.engine.MimeType, param2: ly.img.engine.ExportOptions, param3: any<any,any,any>, param4: any): any;
+							public export(param0: number, param1: ly.img.engine.MimeType, param2: ly.img.engine.ExportOptions, param3: any, param4: any): any;
 							public setTransformLocked(result$iv: number, this_$iv: boolean): void;
 							public getFill(result$iv: number): number;
 							public loadFromArchive(param0: globalAndroid.net.Uri, param1: any): any;
@@ -3642,7 +3641,7 @@ declare module ly {
 							public setGradientColorStops(result$iv: number, this_$iv: string, this_: java.util.List<ly.img.engine.GradientColorStop>): void;
 							/** @deprecated */
 							public hasDuration(result$iv: number): boolean;
-							public exportWithColorMask(param0: number, param1: ly.img.engine.MimeType, param2: ly.img.engine.RGBAColor, param3: ly.img.engine.ExportOptions, param4: any<any,any,any>, param5: any): any;
+							public exportWithColorMask(param0: number, param1: ly.img.engine.MimeType, param2: ly.img.engine.RGBAColor, param3: ly.img.engine.ExportOptions, param4: any, param5: any): any;
 							public isFlipVertical(param0: number): boolean;
 							public enterGroup(result$iv: number): void;
 							public getUUID(result$iv: number): string;
@@ -3688,7 +3687,7 @@ declare module ly {
 							public create(param0: ly.img.engine.DesignBlockType): number;
 							public isPlaceholderBehaviorEnabled(param0: number): boolean;
 							public isPropertyWritable(result$iv: string): boolean;
-							public exportWithColorMask(block: number, mimeType: ly.img.engine.MimeType, maskColor: ly.img.engine.RGBAColor, options: ly.img.engine.ExportOptions, onPreExport: any<any,any,any>, it: any): any;
+							public exportWithColorMask(block: number, mimeType: ly.img.engine.MimeType, maskColor: ly.img.engine.RGBAColor, options: ly.img.engine.ExportOptions, onPreExport: any, it: any): any;
 							public isPlaceholderControlsButtonEnabled(param0: number): boolean;
 							public getOpacity(result$iv: number): number;
 							public isSoloPlaybackEnabled(result$iv: number): boolean;
@@ -3721,7 +3720,7 @@ declare module ly {
 							public getFrameX(param0: number): number;
 							public setTrimLength(result$iv: number, this_$iv: number): void;
 							public removeMetadata(param0: number, param1: string): void;
-							public getTextFontWeights(result$iv: number, this_$iv: number, $i$a$-first-BlockApiImpl$getTextFontWeights$2$1: number): java.util.List<ly.img.engine.FontWeight>;
+							public getTextFontWeights(result$iv: number, this_$iv: number, $i$a$_first_BlockApiImpl$getTextFontWeights$2$1: number): java.util.List<ly.img.engine.FontWeight>;
 							public setStrokePosition(result$iv: number, this_$iv: ly.img.engine.StrokePosition): void;
 							public getSpotColorForCutoutType(result$iv: ly.img.engine.CutoutType): string;
 							public duplicate(result$iv: number): number;
@@ -3751,7 +3750,7 @@ declare module ly {
 							public setCropTranslationY(result$iv: number, this_$iv: number): void;
 							public supportsEffects(result$iv: number): boolean;
 							public setBlendMode(param0: number, param1: ly.img.engine.BlendMode): void;
-							public exportVideo(param0: number, param1: number, param2: number, param3: ly.img.engine.MimeType, param4: any<any,any>, param5: ly.img.engine.ExportVideoOptions, param6: any<any,any,any>, param7: any): any;
+							public exportVideo(param0: number, param1: number, param2: number, param3: ly.img.engine.MimeType, param4: any, param5: ly.img.engine.ExportVideoOptions, param6: any, param7: any): any;
 							public setDropShadowClip(result$iv: number, this_$iv: boolean): void;
 							public getParent(param0: number): java.lang.Integer;
 							public setHeightMode(result$iv: number, this_$iv: ly.img.engine.SizeMode): void;
@@ -3855,7 +3854,7 @@ declare module ly {
 							public getStrokeWidth(result$iv: number): number;
 							public getBoolean(param0: number, param1: string): boolean;
 							public getDropShadowOffsetY(result$iv: number): number;
-							public saveToString($this$saveToString_u24lambda_u2d6: java.util.List<java.lang.Integer>, it: java.util.List<string>, $i$a$-suspendCancellableCoroutine-BaseApi$async$2$iv: any): any;
+							public saveToString($this$saveToString_u24lambda_u2d6: java.util.List<java.lang.Integer>, it: java.util.List<string>, $i$a$_suspendCancellableCoroutine_BaseApi$async$2$iv: any): any;
 							public isIncludedInExport(param0: number): boolean;
 							public isVisible(result$iv: number): boolean;
 						}
@@ -4185,29 +4184,29 @@ declare module ly {
 						export class CoreNativeApi {
 							public static class: java.lang.Class<ly.img.engine.internal.api.core.CoreNativeApi>;
 							public static INSTANCE: ly.img.engine.internal.api.core.CoreNativeApi;
-							public touchRotateDown(param0: number, param1: number, param2: java.util.List<any<java.lang.Float,java.lang.Float>>, param3: number): void;
+							public touchRotateDown(param0: number, param1: number, param2: any, param3: number): void;
 							public releaseCallback(param0: number, param1: number): void;
-							public touchPanMove(param0: number, param1: any<java.lang.Float,java.lang.Float>, param2: java.util.List<any<java.lang.Float,java.lang.Float>>, param3: number): void;
+							public touchPanMove(param0: number, param1: any, param2: any, param3: number): void;
 							public replaceText(param0: number, param1: number, param2: number, param3: string): void;
 							public deleteText(param0: number, param1: number, param2: number): void;
-							public touchPinchMove(param0: number, param1: number, param2: java.util.List<any<java.lang.Float,java.lang.Float>>, param3: number): void;
+							public touchPinchMove(param0: number, param1: number, param2: any, param3: number): void;
 							public unregisterTextChanges(param0: number): void;
 							public renderFrame(param0: number, param1: number, param2: number, param3: number): boolean;
-							public touchPinchDown(param0: number, param1: number, param2: java.util.List<any<java.lang.Float,java.lang.Float>>, param3: number): void;
+							public touchPinchDown(param0: number, param1: number, param2: any, param3: number): void;
 							public exitTextInputMode(param0: number): void;
 							public releaseSubscription(param0: number, param1: number): void;
 							public touchDown(param0: number, param1: number, param2: number, param3: number): void;
 							public releaseEngine(param0: number): void;
-							public touchRotateUp(param0: number, param1: number, param2: java.util.List<any<java.lang.Float,java.lang.Float>>, param3: number): void;
+							public touchRotateUp(param0: number, param1: number, param2: any, param3: number): void;
 							public createEngine(param0: number, param1: boolean, param2: boolean): number;
-							public touchRotateMove(param0: number, param1: number, param2: java.util.List<any<java.lang.Float,java.lang.Float>>, param3: number): void;
-							public touchPanDown(param0: number, param1: any<java.lang.Float,java.lang.Float>, param2: java.util.List<any<java.lang.Float,java.lang.Float>>, param3: number): void;
+							public touchRotateMove(param0: number, param1: number, param2: any, param3: number): void;
+							public touchPanDown(param0: number, param1: any, param2: any, param3: number): void;
 							public onTextCommand(param0: number, param1: string): void;
 							public bindOffscreenContext(param0: number, param1: number, param2: number): boolean;
 							public bindSurfaceContext(param0: number, param1: globalAndroid.view.Surface, param2: number, param3: number): boolean;
 							public update(param0: number): boolean;
-							public touchPanUp(param0: number, param1: any<java.lang.Float,java.lang.Float>, param2: java.util.List<any<java.lang.Float,java.lang.Float>>, param3: number): void;
-							public touchPinchUp(param0: number, param1: number, param2: java.util.List<any<java.lang.Float,java.lang.Float>>, param3: number): void;
+							public touchPanUp(param0: number, param1: any, param2: any, param3: number): void;
+							public touchPinchUp(param0: number, param1: number, param2: any, param3: number): void;
 							public touchUp(param0: number, param1: number, param2: number, param3: number): void;
 							public touchMove(param0: number, param1: number, param2: number, param3: number): void;
 							public releaseContext(param0: number): boolean;
@@ -4257,7 +4256,7 @@ declare module ly {
 							public getGlobalScope(result$iv: string): ly.img.engine.GlobalScope;
 							public defaultUriResolver(param0: globalAndroid.net.Uri): globalAndroid.net.Uri;
 							public onCarouselPageChanged(): kotlinx.coroutines.flow.Flow<java.lang.Integer>;
-							public setUriResolver(param0: any<any,any>): void;
+							public setUriResolver(param0: any): void;
 							public getSettingFloat(result$iv: string): number;
 							public getMaxExportSize(): number;
 							/** @deprecated */
@@ -4294,7 +4293,7 @@ declare module ly {
 							public createHistory(): number;
 							public findAllSpotColors(): java.util.List<string>;
 							public removeSpotColor(param0: string): void;
-							public restoreBuffers(result$iv: java.util.List<any>): void;
+							public restoreBuffers(result$iv: any): void;
 							public getSettingBoolean(param0: string): boolean;
 							public overrideTrackingEndpoint(result$iv: string): void;
 							public setSettingInt(result$iv: string, this_$iv: number): void;
@@ -4319,14 +4318,14 @@ declare module ly {
 							public setActiveHistory(param0: number): void;
 							public onStateChanged(): kotlinx.coroutines.flow.Flow<any>;
 							public getSettingBoolean(result$iv: string): boolean;
-							public setUriResolver(it: any<any,any>): void;
+							public setUriResolver(it: any): void;
 							public destroyHistory(result$iv: number): void;
 							public removeSpotColor(result$iv: string): void;
 							public getGlobalScope(param0: string): ly.img.engine.GlobalScope;
 							public getActiveHistory(): number;
 							public canUndo(): boolean;
 							public setSettingFloat(param0: string, param1: number): void;
-							public cloneBuffers(): java.util.List<any<string,java.nio.ByteBuffer>>;
+							public cloneBuffers(): any;
 							public setBufferData(param0: globalAndroid.net.Uri, param1: number, param2: java.nio.ByteBuffer): void;
 							public getMimeType(param0: globalAndroid.net.Uri, param1: any): any;
 							public setSettingBoolean(result$iv: string, this_$iv: boolean): void;
@@ -4356,13 +4355,13 @@ declare module ly {
 							public getGlobalScope(param0: number, param1: string, param2: ly.img.engine.internal.api.NativeCallback<java.lang.Integer,any>): void;
 							public addUndoStep(param0: number, param1: ly.img.engine.internal.api.NativeCallback<any,any>): void;
 							public defaultURIResolver(param0: number, param1: string, param2: ly.img.engine.internal.api.NativeCallback<string,any>): void;
-							public restoreBuffers(param0: number, param1: java.util.List<any>, param2: ly.img.engine.internal.api.NativeCallback<any,any>): void;
+							public restoreBuffers(param0: number, param1: any, param2: ly.img.engine.internal.api.NativeCallback<any,any>): void;
 							public redo(param0: number, param1: ly.img.engine.internal.api.NativeCallback<any,any>): void;
 							public destroyBuffer(param0: number, param1: string, param2: ly.img.engine.internal.api.NativeCallback<any,any>): void;
 							public getBufferLength(param0: number, param1: string, param2: ly.img.engine.internal.api.NativeCallback<java.lang.Integer,any>): void;
 							public setSettingString(param0: number, param1: string, param2: string, param3: ly.img.engine.internal.api.NativeCallback<any,any>): void;
 							public setTrackingMetadata(param0: number, param1: ly.img.engine.internal.model.TrackingMetadata, param2: ly.img.engine.internal.api.NativeCallback<any,any>): void;
-							public cloneBuffers(param0: number, param1: ly.img.engine.internal.api.NativeCallback<java.util.List<any<string,java.nio.ByteBuffer>>,any>): void;
+							public cloneBuffers(param0: number, param1: any): void;
 							public getSettingEnum(param0: number, param1: string, param2: ly.img.engine.internal.api.NativeCallback<string,any>): void;
 							public setSpotColorCMYK(param0: number, param1: string, param2: number, param3: number, param4: number, param5: number, param6: ly.img.engine.internal.api.NativeCallback<any,any>): void;
 							public onSettingsChanged(param0: number, param1: ly.img.engine.internal.api.NativeCallback<any,any>): number;
@@ -4503,7 +4502,7 @@ declare module ly {
 							public isCameraPositionClampingEnabled(param0: number): boolean;
 							public isCameraZoomClampingEnabled(param0: number): boolean;
 							public load($this$load_u24lambda_u2d0: string, it: any): any;
-							public saveToString($this$saveToString_u24lambda_u2d11: number, it: java.util.List<string>, $i$a$-suspendCancellableCoroutine-BaseApi$async$2$iv: any): any;
+							public saveToString($this$saveToString_u24lambda_u2d11: number, it: java.util.List<string>, $i$a$_suspendCancellableCoroutine_BaseApi$async$2$iv: any): any;
 							public createFromVideo(param0: globalAndroid.net.Uri, param1: any): any;
 							public zoomToBlock(param0: number, param1: number, param2: number, param3: number, param4: number, param5: any): any;
 							public getZoomLevel(): number;
@@ -4516,7 +4515,7 @@ declare module ly {
 							public load(param0: globalAndroid.net.Uri, param1: any): any;
 							public setZoomLevel(param0: number): void;
 							public create(): number;
-							public createFromImage($this$createFromImage_u24lambda_u2d5: globalAndroid.net.Uri, it: number, $i$a$-suspendCancellableCoroutine-BaseApi$async$2$iv: number, callback$iv: any): any;
+							public createFromImage($this$createFromImage_u24lambda_u2d5: globalAndroid.net.Uri, it: number, $i$a$_suspendCancellableCoroutine_BaseApi$async$2$iv: number, callback$iv: any): any;
 							public onActiveChanged(): kotlinx.coroutines.flow.Flow<any>;
 							public enableCameraZoomClamping(param0: java.util.List<java.lang.Integer>, param1: number, param2: number, param3: number, param4: number, param5: number, param6: number): void;
 							public applyTemplate($this$applyTemplate_u24lambda_u2d8: globalAndroid.net.Uri, it: any): any;
@@ -4532,7 +4531,7 @@ declare module ly {
 							public createFromVideo($this$createFromVideo_u24lambda_u2d6: globalAndroid.net.Uri, it: any): any;
 							public getCurrentPage(): java.lang.Integer;
 							public findNearestToViewPortCenterByType(param0: ly.img.engine.DesignBlockType): java.util.List<java.lang.Integer>;
-							public zoomToBlock($this$zoomToBlock_u24lambda_u2d22: number, it: number, $i$a$-suspendCancellableCoroutine-BaseApi$async$2$iv: number, callback$iv: number, handle$iv: number, ubqId$iv: any): any;
+							public zoomToBlock($this$zoomToBlock_u24lambda_u2d22: number, it: number, $i$a$_suspendCancellableCoroutine_BaseApi$async$2$iv: number, callback$iv: number, handle$iv: number, ubqId$iv: any): any;
 							public findNearestToViewPortCenterByType(result$iv: ly.img.engine.DesignBlockType): java.util.List<java.lang.Integer>;
 							public applyTemplate(param0: globalAndroid.net.Uri, param1: any): any;
 						}
@@ -4802,13 +4801,13 @@ declare module ly {
 						public onFocusChange(view: globalAndroid.view.View, hasFocus: boolean): void;
 						public onGlobalLayout(): void;
 						public clear(): void;
-						public onKeyDown($this$onKeyDown_u24lambda_u2d5: number, $i$a$-run-EngineInputView$onKeyDown$2: globalAndroid.view.KeyEvent): boolean;
+						public onKeyDown($this$onKeyDown_u24lambda_u2d5: number, $i$a$_run_EngineInputView$onKeyDown$2: globalAndroid.view.KeyEvent): boolean;
 					}
 					export module EngineInputView {
 						export class Companion {
 							public static class: java.lang.Class<ly.img.engine.internal.text.EngineInputView.Companion>;
-							public mapToGrapheme(graphemeIndex: string, graphemeStart: number, graphemeEnd: number): any<java.lang.Integer,java.lang.Integer>;
-							public mapToNative(this_: string, $this$mapToNative: number, start: number): any<java.lang.Integer,java.lang.Integer>;
+							public mapToGrapheme(graphemeIndex: string, graphemeStart: number, graphemeEnd: number): any;
+							public mapToNative(this_: string, $this$mapToNative: number, start: number): any;
 						}
 						export class EngineInputConnection {
 							public static class: java.lang.Class<ly.img.engine.internal.text.EngineInputView.EngineInputConnection>;
@@ -4857,7 +4856,7 @@ declare module ly {
 						public onGetContentRect($this$onGetContentRect_u24lambda_u2d3: globalAndroid.view.ActionMode, this_: globalAndroid.view.View, mode: globalAndroid.graphics.Rect): void;
 						public onDestroyActionMode(mode: globalAndroid.view.ActionMode): void;
 						public onCreateActionMode(it: globalAndroid.view.ActionMode, element$iv: globalAndroid.view.Menu): boolean;
-						public constructor(rect: globalAndroid.graphics.RectF, textInputData: ly.img.engine.internal.text.TextInputData, actionClickCallback: any<any,any>);
+						public constructor(rect: globalAndroid.graphics.RectF, textInputData: ly.img.engine.internal.text.TextInputData, actionClickCallback: any);
 						public onActionItemClicked(it: globalAndroid.view.ActionMode, element$iv: globalAndroid.view.MenuItem): boolean;
 					}
 					export module TextActionModeCallback {
@@ -4889,7 +4888,7 @@ declare module ly {
 				export module text {
 					export class TextHelper {
 						public static class: java.lang.Class<ly.img.engine.internal.text.TextHelper>;
-						public constructor(rootView: globalAndroid.view.View, it: number, $i$a$-let-TextHelper$1: ly.img.engine.Engine);
+						public constructor(rootView: globalAndroid.view.View, it: number, $i$a$_let_TextHelper$1: ly.img.engine.Engine);
 						public release(): void;
 					}
 				}
